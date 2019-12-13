@@ -4,151 +4,151 @@ class Ironbit {
         this.monday = {
             firstHour: {
                 busy: false,
-                subjects: 'matematicas'
+                subjects: 'math'
             },
             secondHour: {
                 busy: false,
-                subjects: 'español'
+                subjects: 'esp'
             },
             thirdHour: {
                 busy: false,
-                subjects: 'ciencias'
+                subjects: 'sci'
             },
             fourthHour: {
                 busy: false,
-                subjects: 'fisica'
+                subjects: 'phi'
             },
             fifthHour: {
                 busy: false,
-                subjects: 'matematicas'
+                subjects: 'math'
             },
             sixthHour: {
                 busy: false,
-                subjects: 'ciencias'
+                subjects: 'sci'
             },
             seventhHour: {
                 busy: false,
-                subjects: 'español'
+                subjects: 'esp'
             }
         };
         this.twesday = {
             firstHour: {
                 busy: false,
-                subjects: 'matematicas'
+                subjects: 'math'
             },
             secondHour: {
                 busy: false,
-                subjects: 'historia'
+                subjects: 'his'
             },
             thirdHour: {
                 busy: false,
-                subjects: 'ciencias'
+                subjects: 'sci'
             },
             fourthHour: {
                 busy: false,
-                subjects: 'español'
+                subjects: 'esp'
             },
             fifthHour: {
                 busy: false,
-                subjects: 'biologia'
+                subjects: 'bio'
             },
             sixthHour: {
                 busy: false,
-                subjects: 'quimica'
+                subjects: 'chem'
             },
             seventhHour: {
                 busy: false,
-                subjects: 'español'
+                subjects: 'esp'
             }
         };
         this.wednesday = {
             firstHour: {
                 busy: false,
-                subjects: 'biologia'
+                subjects: 'bio'
             },
             secondHour: {
                 busy: false,
-                subjects: 'español'
+                subjects: 'esp'
             },
             thirdHour: {
                 busy: false,
-                subjects: 'fisica'
+                subjects: 'phi'
             },
             fourthHour: {
                 busy: false,
-                subjects: 'ciencias'
+                subjects: 'sci'
             },
             fifthHour: {
                 busy: false,
-                subjects: 'español'
+                subjects: 'esp'
             },
             sixthHour: {
                 busy: false,
-                subjects: 'matematicas'
+                subjects: 'math'
             },
             seventhHour: {
                 busy: false,
-                subjects: 'historia'
+                subjects: 'his'
             }
         };
         this.thursday = {
             firstHour: {
                 busy: false,
-                subjects: 'fisica'
+                subjects: 'phi'
             },
             secondHour: {
                 busy: false,
-                subjects: 'matematicas'
+                subjects: 'math'
             },
             thirdHour: {
                 busy: false,
-                subjects: 'quimica'
+                subjects: 'chem'
             },
             fourthHour: {
                 busy: false,
-                subjects: 'español'
+                subjects: 'esp'
             },
             fifthHour: {
                 busy: false,
-                subjects: 'biologia'
+                subjects: 'bio'
             },
             sixthHour: {
                 busy: false,
-                subjects: 'fisica'
+                subjects: 'phi'
             },
             seventhHour: {
                 busy: false,
-                subjects: 'historia'
+                subjects: 'his'
             }
         };
         this.friday = {
             firstHour: {
                 busy: false,
-                subjects: 'fisica'
+                subjects: 'phi'
             },
             secondHour: {
                 busy: false,
-                subjects: 'matematicas'
+                subjects: 'math'
             },
             thirdHour: {
                 busy: false,
-                subjects: 'español'
+                subjects: 'esp'
             },
             fourthHour: {
                 busy: false,
-                subjects: 'biologia'
+                subjects: 'bio'
             },
             fifthHour: {
                 busy: false,
-                subjects: 'historia'
+                subjects: 'his'
             },
             sixthHour: {
                 busy: false,
-                subjects: 'fisica'
+                subjects: 'phi'
             },
             seventhHour: {
                 busy: false,
-                subjects: 'quimica'
+                subjects: 'chem'
             }
         };
     }
@@ -219,7 +219,7 @@ class Ironbit {
     addSubjectsMonday(teacher){
         /*  
         teacher {
-            materia: 'matematicas',
+            materia: 'math',
             clases: 35
         } */
         let hourDay = 0;
@@ -243,7 +243,7 @@ class Ironbit {
     addSubjectsThuesday(teacher){
         /*  
         teacher {
-            materia: 'matematicas',
+            materia: 'math',
             clases: 35
         } */
         let hourDay = 0;
@@ -267,31 +267,7 @@ class Ironbit {
     addSubjectsWendsday(teacher){
         /*  
         teacher {
-            materia: 'matematicas',
-            clases: 35
-        } */
-        let hourDay = 0;
-        let schedule = [];
-        let hourWork = profesor.hourWork;// Preguntar 
-        for (const key in this.wednesday) {
-            if(this.wednesday[key].busy === false){
-                if(this.wednesday[key].subjects === profesor.subject)  {
-                    if ( hourDay <9){
-                        this.wednesday[key].busy = true;
-                        schedule.push(this.wednesday[key]);
-                        hourDay++;
-                    }else{
-                        return schedule;
-                    }
-                }
-            }
-        }// Fin de recorrerhour y asignarlas
-        return schedule; // Regresa un array con las hour que trabaja ese dia 
-    }
-    addSubjectsThursday(teacher){
-        /*  
-        teacher {
-            materia: 'matematicas',
+            materia: 'math',
             clases: 35
         } */
         let hourDay = 0;
@@ -312,6 +288,84 @@ class Ironbit {
         }// Fin de recorrerhour y asignarlas
         return schedule; // Regresa un array con las hour que trabaja ese dia 
     }
+    addSubjectsThursday(teacher){
+        /*  
+        teacher {
+            materia: 'math',
+            clases: 35
+        } */
+        let hourDay = 0;
+        let schedule = [];
+        let hourWork = teacher.hourWork;// Preguntar 
+        for (const key in this.thursday) {
+            if(this.thursday[key].busy === false){
+                if(this.thursday[key].subjects === teacher.subject)  {
+                    if ( hourDay <8){
+                        this.thursday[key].busy = true;
+                        schedule.push(this.thursday[key]);
+                        hourDay++;
+                    }else{
+                        return schedule;
+                    }
+                }
+            }
+        }// Fin de recorrerhour y asignarlas
+        return schedule; // Regresa un array con las hour que trabaja ese dia 
+    }
+    addSubjectsFriday(teacher){
+        /*  
+        teacher {
+            materia: 'math',
+            clases: 35
+        } */
+        let hourDay = 0;
+        let schedule = [];
+        let hourWork = teacher.hourWork;// Preguntar 
+        for (const key in this.friday) {
+            if(this.friday[key].busy === false){
+                if(this.friday[key].subjects === teacher.subject)  {
+                    if ( hourDay <8){
+                        this.friday[key].busy = true;
+                        schedule.push(this.friday[key]);
+                        hourDay++;
+                    }else{
+                        return schedule;
+                    }
+                }
+            }
+        }// Fin de recorrerhour y asignarlas
+        return schedule; // Regresa un array con las hour que trabaja ese dia 
+    }
+    generateSchedule(teacher){
+        let monday=  addSubjectsMonday(teacher);
+        let thuesday, wednesday, thursday, friday;
+        let scheadule = new Map();
+        scheadule.set(mon, monday);
+        if(monday.lenght <teacher.hourWork){
+             thuesday = addSubjectsThuesday(teacher);
+             scheadule.set(thu, thuesday);
+        }else{
+
+        }
+        if(thuesday.lenght < teacher.hourWork){
+            wednesday = addSubjectsWendsday(teacher);
+            scheadule.set(wed, wednesday);
+        }else{
+
+        }
+        if(wednesday.lenght < teacher.hourWork){
+         thursday = addSubjectsThursday(teacher);
+         scheadule.set(thurs, thursday);
+        }else{
+
+        }
+        if(thuesday.lenght < teacher.hourWork){
+         friday  = addSubjectsFriday(teacher);
+         scheadule.set(fri, friday);
+        }
+        return scheadule;
+    }
+
 
 
 
@@ -322,13 +376,13 @@ class Employee {
          this.years = years;
      }
 }
-class teacher extends Employee{
+class Teacher extends Employee{
     constructor (name, subjects, years){
         super(name, years);
-        this.subjects = [...subjects];
+        this.subjects = subjects;
     }
 }
-class teacherPlace extends teacher{
+class teacherPlace extends Teacher{
     constructor ( name,  subjects, years){
         super( name, subjects, years);
         this.hourT = 50;
@@ -336,15 +390,15 @@ class teacherPlace extends teacher{
         this.numClass = 35;
     }
     datos(){
-        let hourLibreExtra = 0;
+        let hourExtra = 0;
         if(this.years>= 5){
-             hourLibreExtra = parseInt((this.years)/5);
+             hourExtra = parseInt((this.years)/5);
         }
         let profe = {
-            subjects :  [...this.subjects],
-            hourWork : this.hourT - this.hourL -hourLibreExtra,
+            subjects : this.subjects,
+            hourWork : this.hourT - this.hourL -hourExtra,
         }
-        return profe;
+        return teacher;
     }
 }
 class teacherContrato extends teacher{
