@@ -5,7 +5,9 @@ let result = ( start, finish) =>{
     let contDiv = 0;
     for( let i = start; i<=finish; i++){
         for( let j = 0; j<divisores.length; j++){
-             if(i === 2 || i === 3 || i === 5 || i === 7){
+            if( i === 1){
+                contDiv ==
+            } else if(i === 2 || i === 3 || i === 5 || i === 7){
                 contDiv = 0;
                 
              }else if ( i%divisores[j] === 0){
