@@ -1,6 +1,6 @@
 
 class Ironbit {
-    constructor() {
+    constructor() {//
         this.monday = {
             firstHour: {
                 busy: false,
@@ -396,7 +396,7 @@ class teacherPlace extends Teacher{
         }
         let profe = {
             subjects : this.subjects,
-            hourWork : this.hourT - this.hourL -hourExtra,
+            hourWork : this.hourT - this.hourL -hourExtra
         }
         return teacher;
     }
