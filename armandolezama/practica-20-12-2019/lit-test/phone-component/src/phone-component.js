@@ -29,6 +29,12 @@ export class PhoneComponent extends LitElement {
                 battery.stopDischarge();
             }
         })
+        battery.addEventListener('battery-status', event => {
+            if(event.detail.batteryStatus <= 10){
+                player.pause();
+            }
+            
+        })
         
     }
 
