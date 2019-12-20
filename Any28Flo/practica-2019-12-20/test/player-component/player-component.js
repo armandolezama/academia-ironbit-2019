@@ -18,6 +18,7 @@ class PlayerComponent extends LitElement {
   constructor() {
     super();
     this.isPlaying = false;
+    this.play=false;
   }
 
   render() {
@@ -35,18 +36,8 @@ class PlayerComponent extends LitElement {
       `;
     }
   playSong(){
-    const myAudio=  document.getElementById("myAudio");
-    if (this.isPlaying) {
-      myAudio.pause()
-    } else {
-      myAudio.play();
-    }
-    myAudio.onplaying = ()=> this.isPlaying = true;
-    
-      
-    myAudio.onpause = ()=> this.isPlaying = false;
-    
-     
+    const myAudio= this.shadowRoot.querySelector("#myAudio")
+    myAudio.play();
   }
   
 }
