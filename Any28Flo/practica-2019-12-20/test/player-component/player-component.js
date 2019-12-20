@@ -7,7 +7,9 @@ import '@vaadin/vaadin-icons/vaadin-icons.js';
 class PlayerComponent extends LitElement {
   static get properties() {
     return {
-      isPlaying: { type: Boolean }
+      isPlaying: { type: Boolean },
+      src : {type: String},
+      imgSrc : {type: String}
     };
   }
 
@@ -17,22 +19,24 @@ class PlayerComponent extends LitElement {
 
   constructor() {
     super();
+    this.nameArtis ="Lady Gaga",
+    this.nameSong ="Poker Face"
     this.isPlaying = false;
-    this.play=false;
+    this.src = "http://www.sousound.com/music/healing/healing_01.mp3";
+    this.imgSrc ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg0vRXmXQa3iFkr9Ie2mvIKcCbojmu4MS-HUoitGgUx5_q9jvgkQ&s"
   }
 
   render() {
     return html`
        <paper-card>
         <div class="card-content">
-          <h3>Artist-Song</h3>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg0vRXmXQa3iFkr9Ie2mvIKcCbojmu4MS-HUoitGgUx5_q9jvgkQ&s">
+          <h3>${this.nameArtis}- ${this.nameSong}</h3>
+          <img src="${this.imgSrc}">
         </div>
         <div class="card-actions">
-        <audio id="myAudio" src="http://www.sousound.com/music/healing/healing_01.mp3" preload="auto"></audio>
+        <audio id="myAudio" src="${this.src}" preload="auto"></audio>
         <button @click="${this.playing}"><iron-icon icon="vaadin:play-circle-o"></iron-icon></button>
         <button @click="${this.pause}"><iron-icon icon="vaadin:pause"></iron-icon></button>
-
         </div>
       </paper-card>
       `;
