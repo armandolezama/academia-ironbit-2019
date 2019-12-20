@@ -125,6 +125,13 @@ export class PlayerComponent extends LitElement {
         }
     }
 
+    pause(){
+      if (this.media.paused === false) {
+        this.media.pause();
+        this._auxiliarFunction(this.ui.play).classList.remove('pause');
+      }
+    }
+
     _calculateCurrentValue (currentTime) {
         const currentMinute = parseInt(currentTime / 60) % 60;
         const currentSecondsLong = currentTime % 60;

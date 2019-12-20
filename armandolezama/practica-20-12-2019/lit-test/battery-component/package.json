@@ -1,5 +1,5 @@
 {
-  "name": "battery-component",
+  "name": "@phone/battery-component",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",

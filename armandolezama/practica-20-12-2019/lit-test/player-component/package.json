@@ -1,5 +1,5 @@
 {
-  "name": "player-component",
+  "name": "@phone/player-component",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
