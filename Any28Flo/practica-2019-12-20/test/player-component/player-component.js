@@ -30,14 +30,20 @@ class PlayerComponent extends LitElement {
         </div>
         <div class="card-actions">
         <audio id="myAudio" src="http://www.sousound.com/music/healing/healing_01.mp3" preload="auto"></audio>
-        <button @click="${this.playSong}"><iron-icon icon="vaadin:play-circle-o"></iron-icon></button>
+        <button @click="${this.playing}"><iron-icon icon="vaadin:play-circle-o"></iron-icon></button>
+        <button @click="${this.pause}"><iron-icon icon="vaadin:pause"></iron-icon></button>
+
         </div>
       </paper-card>
       `;
     }
-  playSong(){
+  playing(){
     const myAudio= this.shadowRoot.querySelector("#myAudio")
     myAudio.play();
+  }
+  pause(){
+    const myAudio= this.shadowRoot.querySelector("#myAudio")
+    myAudio.pause();
   }
   
 }
