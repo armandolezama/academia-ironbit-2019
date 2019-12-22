@@ -129,6 +129,7 @@ export class PlayerComponent extends LitElement {
       if (this.media.paused === false) {
         this.media.pause();
         this._auxiliarFunction(this.ui.play).classList.remove('pause');
+        this.dispatchEvent(new Event('player-paused'));
       }
     }
 
@@ -151,7 +152,7 @@ export class PlayerComponent extends LitElement {
     _initProgressBar() {
         const currentTime = this._calculateCurrentValue(this.media.currentTime);
         this._auxiliarFunction(this.ui.currentTime).innerHTML = currentTime;
-        this._auxiliarFunction(this.ui.seekObj).addEventListener('click', this._seek);
+        this._auxiliarFunction(this.ui.seekObj).addEventListener('click', this._seek.bind(this));
 
         this.media.onended = () => {
             this._auxiliarFunction(this.ui.play).classList.remove('pause');
