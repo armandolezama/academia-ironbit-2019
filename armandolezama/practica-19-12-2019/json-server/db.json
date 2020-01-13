@@ -1,0 +1,65 @@
+{ 
+    "food" : {
+        "dishes" : [{
+            "name" : "Pechuga empanizada",
+            "description" : "Peshuguita empanizaduki",
+            "price" : "$200.00",
+            "rate" : 0,
+            "comments" : []
+            
+        }, {
+            "name" : "Arroz",
+            "description" : "Arrozuki de chinos",
+            "price" : "$50.00",
+            "rate" : 0,
+            "comments" : []
+        }],
+
+        "drinks" : [{
+            "name" : "Chesco shingón" ,
+            "description" : "Chesquito de cualquier sabor uwu",
+            "price" : "$23.00",
+            "rate" : 0,
+            "comments" : []
+        }, {
+            "name" : "Awita shingona" ,
+            "description" : "Chesquito de cualquier sabor uwu",
+            "price" : "$23.00",
+            "rate" : 0,
+            "comments" : []
+        }],
+
+        "desserts" : [{
+            "name" : "Flan napolitano",
+            "description" : "Flansito con dulce y amor <3",
+            "price" : "$60.00",
+            "rate" : 0,
+            "comments" : []
+        }],
+
+        "combos" : [{
+            "name" : "Paque-te llenes",
+            "description" : "Tiene arroz, chesquito y postre incluido",
+            "price" : "$120.00",
+            "rate" : 0,
+            "comments" : []
+        }]
+    },
+
+    "people" : {
+        "clients" : [{
+            "name" : "El Christian",
+            "email" : "elchris@gmail.com",
+            "comments" : []
+        }],
+        "employees" : [{
+            "name" : "Elles Clavo",
+            "email" : "ellesclavo@gmail.com"
+        }],
+        "managers" : [{
+            "name" : "Patt Ron",
+            "email" : "pattron@gmail.com"
+        }]
+    }
+    
+}
